@@ -40,11 +40,63 @@ public class Pattern{
             System.out.println("");
         }
     }
+    public static void eo(int maxE){
+        int eo =0;
+        if (maxE%2==0){
+            eo=0;
+        }
+        else{
+            eo=1;
+        }
+        for (int i =0; i <= maxE; i++  ){
+            for (int y=0; y<i; y++){
+                if (eo %2 ==0){
+                    System.out.print("E");
+                }
+                else{
+                    System.out.print("O");
+                }
+            }  
+            System.out.println("");
+            eo++;
+        }
+        for (int i =(maxE-1); i > 0; i--  ){
+            for (int y=0; y<i; y++){
+                if (eo %2 ==0){
+                    System.out.print("E");
+                }
+                else{
+                    System.out.print("O");
+                }
+            }  
+            System.out.println("");
+            eo--;
+        }
 
+    }
+    public static void pyramid(int rows){
+        int i=1;
+        int row=(rows+rows-1);
+        while (i<=rows){
+            for (int x=0; x<row; x++){
+                System.out.print(i);
+            }
+            System.out.println("");
+            for (int y=0; y<i; y++){
+                System.out.print(" ");
+            }
+            i++;
+            row-=2;
+
+        }
+    }
 
     public static void main (String [] args){
         stars (7);
         triangle (9);
         odds (9);
+        eo (6);
+        eo(5);
+        pyramid(5);
     }
 }
