@@ -2,8 +2,9 @@
 //10/28/2026
 //this class, contains different methods which will create certain pattern, this is to practice the use of different types of loops.
 
-
 public class Pattern{
+    //precondition: rows is not negative and not 0
+    //postcondition: it will create a pattern of stars with a number of rows equal to rows, each one increasing by 2 stars
     public static void stars(int rows){
         int count1 = 0;
         int stars = 1;
@@ -18,6 +19,9 @@ public class Pattern{
             stars+=2;
         }
     }
+    //precondition: the given rows is not negative and is not 0
+    //postcondition: will create a pattern counting up to the given number, each line using the current row, and containing 
+    // an amount of numbers equal to the current row.
     public static void triangle(int rows){
         int count1 = 0;
         int num = 1;
@@ -32,14 +36,20 @@ public class Pattern{
             num++;
         }
     }
+    //precondition: start is not a negative value or 0
+    //postcondition: it makes a pattern counting down to 0 from the start only using odd numbers.
     public static void odds(int start){
-        for (int i=start; i>0; i-=2){
-            for (int x=0; x<i; x++){
-                System.out.print(i);
+        for (int i=start; i>0; i--){
+            if (i%2!=0){
+                for (int x=0; x<i; x++){
+                    System.out.print(i);
+                }
+                System.out.println("");
             }
-            System.out.println("");
         }
     }
+    //precondition:
+    //postcondition:
     public static void eo(int maxE){
         int eo =0;
         if (maxE%2==0){
@@ -74,6 +84,8 @@ public class Pattern{
         }
 
     }
+    //precondition:
+    //postcondition:
     public static void pyramid(int rows){
         int i=1;
         int row=(rows+rows-1);
