@@ -93,10 +93,15 @@ public class Pattern{
 
     public static void main (String [] args){
         stars (7);
+        System.out.println("");
         triangle (9);
+        System.out.println("");
         odds (9);
+        System.out.println("");
         eo (6);
+        System.out.println("");
         eo(5);
+        System.out.println("");
         pyramid(5);
     }
 }
